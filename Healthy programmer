@@ -1,0 +1,47 @@
+
+import time
+from pygame import mixer
+mixer.init()
+def getdate():
+    import datetime
+    return datetime.datetime.now()
+# hello_orld = "kavya mittal drin water"
+# print("time starated")
+while True:
+    
+    time.sleep(1200)
+    print("PLEASE DO YOU EYES EXERCISE")
+    mixer.music.load('eyes.mp3')
+    mixer.music.play()
+    work = input("Work = ")
+    if work == "done":
+        k = open("eyes", "a")
+        k.write(f"time[{getdate()}]")
+        mixer.music.stop()
+        print("sucessfully written")
+    
+    time.sleep(600)
+    print("PLEASE DRINK WATER")
+    mixer.music.load('drink.mp3')
+    mixer.music.play()
+    work = input("Work = ")
+    if work == "done":
+        k = open("water", "a")
+        k.write(f"time[{getdate()}]")
+        mixer.music.stop()
+        print("sucessfully written")
+    time.sleep(900)
+    print("PLEASE DO YOU EXERCISE")
+    mixer.music.load('exercise.mp3')
+    mixer.music.play()
+    work = input("Work = ")
+    if work == "done":
+        k = open("exercise", "a")
+        k.write(f"time[{getdate()}]")
+        mixer.music.stop()
+        print("sucessfully written")
+    
+    
+
+
+
